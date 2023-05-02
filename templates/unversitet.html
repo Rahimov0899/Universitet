@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ustoz</title>
+</head>
+<body>
+<li>
+      <h1>Universitet Ustozlar</h1>
+      <br>
+      <hr>
+    <form method="get">
+      <input type="text" name="qidiruv">
+      <button>Qidirish</button>
+    </form>
+    <br>
+    <br>
+
+      {% for i in ustoz %}
+      <p>Ustoz nomi:{{i.ism}}</p>
+
+      {% endfor %}
+</li>
+</body>
+</html>
