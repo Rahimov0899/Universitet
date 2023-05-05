@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Ustoz</title>
+    <title>Yonalish</title>
   </head>
   <body>
-    <h1>Xamma Ustozlar</h1>
+    <h1>Xamma Yonalishlar</h1>
      <br>
     <hr>
     <br>
@@ -16,8 +16,8 @@
     <br>
     <br>
     <ul>
-      {% for k in ustozlar%}
-      <h1>{{k.id}}.{{k.ism}}</h1>
+      {% for k in yonalish%}
+      <h1>{{k.id}}.{{k.nom}}</h1>
       <br>
       <a href="/bitta_ochir/{{i.id}}/"><button>delete</button></a>
 
@@ -25,15 +25,8 @@
          <br>
          <br>
              <form method="post">{% csrf_token %}
-        <input type="text" name="ism" placeholder="Ism">
-        <input type="text" name="j" placeholder="Jins">
-        <input type="text" name="yosh" placeholder="Yosh">
-        <input type="text" name="d" placeholder="Daraja">
-        <select name="fan">
-            {% for i in fan%}
-            <option value={{i.id}}>{{i.id}}</option>
-            {% endfor %}
-        </select>
+        <input type="text" name="nom" placeholder="nom">
+        <input type="text" name="aktiv" placeholder="Aktiv">
         <button type="submit">Qo'shish</button>
     </form>
     <br>
